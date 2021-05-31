@@ -5,14 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="显示返回参数"
+        android:id="@+id/showTitle"
+        app:layout_constraintBottom_toTopOf="@+id/showPassword"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:hint="输入访问密码:"
+        android:id="@+id/showPassword"
+        app:layout_constraintBottom_toTopOf="@+id/showContent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showTitle" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showContent"
+        android:text="显示文件信息!"
+        app:layout_constraintBottom_toTopOf="@+id/showPositive"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showPassword" />
+    
+    <com.wuxianggujun.lcnetdiskapi.view.HorizontalProgressBarWithNumber
+        android:id="@+id/id_progressbar01"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dip"
+        android:padding="5dp" 
+        app:layout_constraintBottom_toTopOf="@+id/showPositive"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showContent" />
+    
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传"
+        android:id="@+id/showPositive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/id_progressbar01" />
+    
+   
 </androidx.constraintlayout.widget.ConstraintLayout>
